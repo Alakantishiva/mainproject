@@ -15,7 +15,5 @@ public interface Locators {
 	public static final By RESULT=By.xpath("//span[@class='a-size-medium-plus a-color-base a-text-bold']");
 	public static final By SEARCH_ITEM=By.xpath("//span[contains(text(),'Zebronics Zeb-Power')]");
 	public static final By AMOUNTVERIFY=By.xpath("//span[contains(@class,'a-price-whole')]");
-	
-	
 }
 	
