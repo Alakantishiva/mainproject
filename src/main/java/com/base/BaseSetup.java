@@ -14,7 +14,7 @@ public WebDriver driver;
 		WebDriverManager.chromedriver().setup();
 		driver =new ChromeDriver ();
 		driver.manage().window().maximize();
-		driver.get("https://mytestingthoughts.com/Sample/home.html");
+		driver.get("https://www.amazon.in/");
 	}
 
 

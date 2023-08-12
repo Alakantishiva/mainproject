@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="pack2.LogIn_Functionality">
+      <class name="com.testscript.LogIn_Functionality">
         <methods>
+          <include name="amountTest"/>
           <include name="setup"/>
-          <include name="Testlogin"/>
         </methods>
-      </class> <!-- pack2.LogIn_Functionality -->
+      </class> <!-- com.testscript.LogIn_Functionality -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

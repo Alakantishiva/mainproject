@@ -1,36 +1,47 @@
 package com.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 import com.base.BaseSetup;
 import com.objectrepository.Locators;
 
 public class login extends BaseSetup{
-	
-	public void Registration (){
-		driver.findElement(Locators.FIRST_NAME).sendKeys("Shiva");;
-		driver.findElement(Locators.LAST_NAME).sendKeys("Alakanti");;
+
+	public void loginToApp(){
+		System.out.println("Started login");
+		driver.findElement(Locators.SINGUP).click();
+		driver.findElement(Locators.EMAIL).sendKeys("alakantishivashankar888@gmail.com");
+		driver.findElement(Locators.CONTINUE).click();
+		driver.findElement(Locators.PASSWORD).sendKeys("Shiva@143*");
+		driver.findElement(Locators.SINGUP1).click();
+		Assert.assertTrue(driver.findElement(Locators.AMAZONLOGO).isDisplayed());
 	}
-	public void Gender() {
-		driver.findElement(Locators.GENDER).click();
+		public void searchAnItem(String item) {
+			System.out.println("Searching an item");
+			driver.findElement(Locators.SEARCH).click();
+			driver.findElement(Locators.SEARCH).sendKeys(item);
+			driver.findElement(Locators.SEARCH_BUTTON).click();
 		
-	}
-	public void Hobbies() {
-	Select dropdown=new Select(driver.findElement(By.id("exampleFormControlSelect2")));
-	dropdown.selectByVisibleText("Running");
-	
-	}
-	public void Office() {
-		driver.findElement(Locators.DEP).click();
-		Select Dropdown =new Select(driver.findElement(Locators.DEP));
-		Dropdown.deselectByVisibleText("Tourism Office");
-	}
-	public void Username() {
-		driver.findElement(Locators.USERNAME).sendKeys("Shivaalakanti");
-	}
-	public void Password() {
-		driver.findElement(Locators.PASSWORD).sendKeys("Password");
+			Assert.assertTrue(driver.findElement(Locators.RESULT).isDisplayed());
+			System.out.println("Searched item found succesful");
+		}
+		public void verifyItemAmount(String amount) throws InterruptedException {
+			System.out.println("Started verifying Amount forthe product");
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,650)", "");
+			driver.findElement(Locators.SEARCH_ITEM).click();
+			Assert.assertEquals(driver.findElement(Locators.AMOUNTVERIFY).getText(),amount);
+			System.out.println("Amount verified is successful");
+		}
+
+
+//		public void dynamicLocator(String text) {
+//			WebElement ele = By.xpath("//span[contains(text(),'"+text+"')]";
+//		}
+
 	}
 
-}

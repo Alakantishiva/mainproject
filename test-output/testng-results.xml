@@ -1,26 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-12T17:13:58 IST" name="Default suite" finished-at="2023-08-12T17:14:05 IST" duration-ms="6425">
+  <suite started-at="2023-08-12T20:04:46 IST" name="Default suite" finished-at="2023-08-12T20:04:59 IST" duration-ms="12878">
     <groups>
     </groups>
-    <test started-at="2023-08-12T17:13:58 IST" name="Default test" finished-at="2023-08-12T17:14:05 IST" duration-ms="6425">
-      <class name="pack2.LogIn_Functionality">
-        <test-method is-config="true" signature="setup()[pri:0, instance:pack2.LogIn_Functionality@26d9b808]" started-at="2023-08-12T17:13:58 IST" name="setup" finished-at="2023-08-12T17:14:04 IST" duration-ms="5918" status="PASS">
+    <test started-at="2023-08-12T20:04:46 IST" name="Default test" finished-at="2023-08-12T20:04:59 IST" duration-ms="12878">
+      <class name="com.testscript.LogIn_Functionality">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.testscript.LogIn_Functionality@740cae06]" started-at="2023-08-12T20:04:46 IST" name="setup" finished-at="2023-08-12T20:04:50 IST" duration-ms="3845" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Testlogin()[pri:0, instance:pack2.LogIn_Functionality@26d9b808]" started-at="2023-08-12T17:14:04 IST" name="Testlogin" finished-at="2023-08-12T17:14:05 IST" duration-ms="470" status="FAIL">
-          <exception class="java.lang.UnsupportedOperationException">
+        <test-method signature="testLogin()[pri:1, instance:com.testscript.LogIn_Functionality@740cae06]" started-at="2023-08-12T20:04:50 IST" name="testLogin" finished-at="2023-08-12T20:04:56 IST" duration-ms="5592" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method signature="testsearch()[pri:2, instance:com.testscript.LogIn_Functionality@740cae06]" started-at="2023-08-12T20:04:56 IST" name="testsearch" finished-at="2023-08-12T20:04:59 IST" duration-ms="3308" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsearch -->
+        <test-method signature="amountTest()[pri:3, instance:com.testscript.LogIn_Functionality@740cae06]" started-at="2023-08-12T20:04:59 IST" name="amountTest" finished-at="2023-08-12T20:04:59 IST" duration-ms="81" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[You may only deselect options of a multi-select]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//span[contains(text(),'Zebronics Zeb-Power')]"}
+  (Session info: chrome=115.0.5790.171)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SHIVA', ip: '192.168.1.50', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.171, chrome: {chromedriverVersion: 115.0.5790.170 (cc0d30c2ca5..., userDataDir: C:\Users\91703\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56320}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 69dfa9e3b9d5cd6b1afe2d2843e631c1
+*** Element info: {Using=xpath, value=//span[contains(text(),'Zebronics Zeb-Power')]}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.UnsupportedOperationException: You may only deselect options of a multi-select
-at org.openqa.selenium.support.ui.Select.deselectByVisibleText(Select.java:264)
-at Pages.login.Office(login.java:27)
-at pack2.LogIn_Functionality.Testlogin(LogIn_Functionality.java:15)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[contains(text(),'Zebronics Zeb-Power')]"}
+  (Session info: chrome=115.0.5790.171)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SHIVA', ip: '192.168.1.50', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.171, chrome: {chromedriverVersion: 115.0.5790.170 (cc0d30c2ca5..., userDataDir: C:\Users\91703\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56320}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 69dfa9e3b9d5cd6b1afe2d2843e631c1
+*** Element info: {Using=xpath, value=//span[contains(text(),'Zebronics Zeb-Power')]}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at com.pages.login.verifyItemAmount(login.java:35)
+at com.testscript.LogIn_Functionality.amountTest(LogIn_Functionality.java:22)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -51,11 +89,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.UnsupportedOperationException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Testlogin -->
-      </class> <!-- pack2.LogIn_Functionality -->
+        </test-method> <!-- amountTest -->
+      </class> <!-- com.testscript.LogIn_Functionality -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
